@@ -1,8 +1,6 @@
-tensorflow==2.13.0
-tensorflow-hub==0.14.0
 streamlit==1.22.0
 opencv-python==4.7.0.72
 numpy==1.23.5
-pillow==9.4.0
-opencv-python
-opencv-contrib-python
+Pillow==9.4.0
+tensorflow==2.13.0
+tensorflow-hub==0.14.0
