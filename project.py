@@ -34,4 +34,16 @@ if uploaded_file is not None:
     image_reshaped = np.reshape(input_img_scaled, [1, 224, 224, 3])
     
     # Predict the image class
-    input_prediction = model.predict(image_
+    input_prediction = model.predict(image_reshaped)
+    
+    # Get the predicted label
+    input_pred_label = np.argmax(input_prediction)
+    
+    # Display the prediction and the label
+    st.write(f"Prediction: {input_prediction}")
+    st.write(f"Predicted Label: {input_pred_label}")
+    
+    if input_pred_label == 0:
+        st.write("The image contains a Dog")
+    else:
+        st.write("The image contains a Cat")
