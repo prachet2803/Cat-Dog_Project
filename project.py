@@ -8,7 +8,7 @@ from PIL import Image
 
 # Load your pre-trained model with custom objects
 with custom_object_scope({'KerasLayer': hub.KerasLayer}):
-    model = load_model('path_to_your_model.h5')
+    model = load_model('dog_cat_model.h5')
 
 # Streamlit UI
 st.title("Dog vs Cat Image Classification")
