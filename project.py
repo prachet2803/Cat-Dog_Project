@@ -1,25 +1,23 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Jul  4 18:17:20 2024
-
-@author: prachet
-"""
-
 import streamlit as st
 import cv2
 import numpy as np
 from tensorflow.keras.models import load_model
+from tensorflow.keras.utils import custom_object_scope
+import tensorflow_hub as hub
+from PIL import Image
 
-# Load your pre-trained model
-model = load_model("dog_cat_model.h5")
+# Load your pre-trained model with custom objects
+with custom_object_scope({'KerasLayer': hub.KerasLayer}):
+    model = load_model('path_to_your_model.h5')
 
 # Streamlit UI
 st.title("Dog vs Cat Image Classification")
 
+# File uploader for the image
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
-    # Read the image file
+    # Convert the uploaded file to an opencv image
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     input_img = cv2.imdecode(file_bytes, 1)
     
