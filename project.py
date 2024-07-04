@@ -11,7 +11,7 @@ import numpy as np
 from tensorflow.keras.models import load_model
 
 # Load your pre-trained model
-model = load_model("C:/Users/prachet/OneDrive - Vidyalankar Institute of Technology/Desktop/Coding/Machine Learning/DEEP LEARNING/DL Project 3. Dog vs Cat Classification using Transfer Learning/dog_cat_model.h5")
+model = load_model("dog_cat_model.h5")
 
 # Streamlit UI
 st.title("Dog vs Cat Image Classification")
