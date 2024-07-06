@@ -6,7 +6,7 @@ import tensorflow as tf
 
 # Load your pre-trained model here
 # For example, replace 'your_model_path' with the path to your saved model
-model = tf.keras.models.load_model('your_model_path')
+model = tf.keras.models.load_model('dog_cat_model.h5')
 
 def predict_image(image):
     # Resize the image to the required input size
