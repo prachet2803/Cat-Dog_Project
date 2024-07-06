@@ -1,6 +1,5 @@
-streamlit==1.22.0
-opencv-python==4.8.0
-numpy==1.23.5
-Pillow==9.4.0
-tensorflow==2.13.0
-tensorflow-hub==0.14.0
+streamlit==1.24.0  # Ensure to use a version compatible with your code
+opencv-python==4.7.0.72  # OpenCV for image processing
+numpy==1.23.5  # Numerical operations
+pillow==9.5.0  # For handling images in PIL format
+tensorflow==2.13.0  # TensorFlow for loading and running the model
